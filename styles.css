@@ -1,0 +1,330 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #e6e6fa, #8a2be2);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: #4b0082;
+}
+#balloon-game {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#game-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -50px;
+    width: 40px;
+    height: 50px;
+    background-color: #ff69b4;
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.balloon:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #ff69b4;
+}
+
+#game-controls {
+    margin-top: 20px;
+}
+
+#start-game {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start-game:hover {
+    background-color: #45a049;
+}
+/* Countdown Timer Styles */
+#countdown {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#timer div {
+    background-color: rgba(75, 0, 130, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    min-width: 100px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #8a2be2;
+    }
+    to {
+        box-shadow: 0 0 20px #8a2be2;
+    }
+}
+.voice-note {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.voice-note audio {
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #a64ca6; /* Purple border */
+    border-radius: 10px;
+    background-color: #f3e5f5; /* Light purple background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+#voice-notes h2 {
+    color: #a64ca6; /* Purple text color */
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Attempt to style audio controls */
+.voice-note audio::-webkit-media-controls-panel {
+    background-color: #f3e5f5; /* Light purple for controls */
+    border-radius: 10px;
+}
+
+.voice-note audio::-webkit-media-controls-play-button,
+.voice-note audio::-webkit-media-controls-timeline,
+.voice-note audio::-webkit-media-controls-current-time-display,
+.voice-note audio::-webkit-media-controls-time-remaining-display {
+    color: #a64ca6; /* Purple color for controls */
+}
+
+.voice-note audio::-webkit-media-controls-seek-bar {
+    background-color: #a64ca6; /* Purple color for seek bar */
+}
+
+.voice-note audio::-webkit-media-controls-play-button {
+    background-color: #a64ca6; /* Purple color for play button */
+    border-radius: 50%;
+}
+
+/* Cake and Candle Styles */
+#cake-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cake {
+    width: 200px;
+    height: 100px;
+    background-color: #ffcccb; /* Light pink for the cake */
+    border-radius: 10px;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.candle {
+    width: 10px;
+    height: 40px;
+    background-color: #ff69b4; /* Hot pink for the candle */
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flame {
+    width: 10px;
+    height: 20px;
+    background-color: #ff4500; /* Orange for the flame */
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+    from {
+        transform: translateX(-50%) scale(1);
+    }
+    to {
+        transform: translateX(-50%) scale(1.1);
+    }
+}
+/* Slideshow Styles */
+.slideshow-container {
+    max-width: 800px;
+    width: 100%;
+    height: 450px; /* Set a fixed height for the slideshow container */
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+    background-color: #fff; /* Add a background color to fill any empty space */
+}
+
+.slide {
+    display: none;
+    animation: fade 1.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain; /* This will ensure the image fits within the slide area */
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.slide:hover img {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+/* Navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(255, 182, 193, 0.6); /* Light pink background */
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 105, 180, 0.8); /* Hot pink on hover */
+}
+
+/* Dots/bullets/indicators */
+.dot-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #ffc0cb; /* Pink */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #ff69b4; /* Hot pink */
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 182, 193, 0.7); /* Light pink background */
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Quotes Section Styles */
+#quotes {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#quote {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #4b0082;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #timer {
+        flex-wrap: wrap;
+    }
+
+    #timer div {
+        font-size: 18px;
+        min-width: 80px;
+    }
+}
