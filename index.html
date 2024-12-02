@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 21st Birthday, My Love!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Happy 21st Birthday, Mozan !</h1>
+        </header>
+
+        <section id="countdown">
+            <h2>Countdown to Your Special Day</h2>
+            <div id="timer">
+                <div><span id="days"></span>Days</div>
+                <div><span id="hours"></span>Hours</div>
+                <div><span id="minutes"></span>Minutes</div>
+                <div><span id="seconds"></span>Seconds</div>
+            </div>
+        </section>
+
+        <section id="slideshow">
+            <div class="slideshow-container">
+                <!-- Add your images here -->
+                <div class="slide fade">
+                    <img src="IMG-20241021-WA0010.jpg" alt="Happy memory 1">
+                    <div class="text">Our first date</div>
+                </div>
+                <div class="slide fade">
+                    <img src="IMG-20241021-WA0011.jpg" alt="Happy memory 2">
+                    <div class="text">Celebrating your achievements</div>
+                </div>
+                <div class="slide fade">
+                    <img src="IMG-20241021-WA0012.jpg" alt="Happy memory 3">
+                    <div class="text">Our favorite adventure</div>
+                </div>
+                <div class="slide fade">
+                    <img src="IMG-20241021-WA0013.jpg" alt="Happy memory 4">
+                    <div class="text">Laughing together</div>
+                </div>
+                <div class="slide fade">
+                    <img src="IMG-20241021-WA0014.jpg" alt="Happy memory 5">
+                    <div class="text">A romantic evening</div>
+                </div>
+                <div class="slide fade">
+                    <img src="IMG-20241021-WA0015.jpg" alt="Happy memory 6">
+                    <div class="text">Creating memories</div>
+                </div>
+        
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </section>
+        <!-- Cake with Candle -->
+        <section id="cake-section">
+            <div class="cake">
+                <div class="candle" onclick="blowOutCandle()">
+                    <div class="flame"></div>
+                </div>
+            </div>
+        </section>
+        <section id="balloon-game">
+            <h2>Pop the Balloons!</h2>
+            <div id="game-container">
+                <!-- Balloons will be dynamically added here -->
+            </div>
+            <div id="game-controls">
+                <button id="start-game">Start Game</button>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+        </section>
+        <section id="quotes">
+            <h2>Words of Love and Inspiration</h2>
+            <p id="quote"></p>
+        </section>
+         <!-- Voice Notes Section -->
+    <section id="voice-notes">
+        <h2>Voice Notes</h2>
+        <div class="voice-note">
+            <audio controls>
+                <source src="hbd-jazz.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="voice-note">
+            <audio controls>
+                <source src="voice-note2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+    </div>
+
+    
+    <audio id="backgroundMusic" loop>
+        <source src="hbd-jazz.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
