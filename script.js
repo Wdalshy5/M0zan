@@ -66,7 +66,7 @@
 function updateCountdown() {
     const now = new Date();
     const currentYear = now.getFullYear();
-    let birthday = new Date("2024-01-05T00:00:00");
+    let birthday = new Date("2025-01-05T00:00:00");
     
     // If the birthday this year has already passed, set it to next year
     if (now > birthday) {
